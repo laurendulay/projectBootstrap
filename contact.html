@@ -12,14 +12,23 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-           <h1>Enoteca Maria</h1><br>
- <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="calendar.html">Calendar</a>
-    <a href="menu.html">Menu</a>
-    <a href='grandmas.html'>Grandmas</a>
-    <a href="contact.html">Contact</a></nav>
+               <nav class="navbar navbar-default affix-top">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">Enoteca Maria</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="grandmas.html">Grandmas</a></li>
+                <li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
    
     <h3>Contact Us</h3>
         <form>
@@ -31,9 +40,10 @@
             </label><br>
             <label>Subject<br>
             <input type="subject" name="sub">
-            </label><br><br>
+            </label><br>
+            <label>Message</label><br>
             <textarea name="message">
-            </textarea><br>
+            </textarea><br><br>
             <input type="submit" name="emailThis" value="Send Now">
             </form>
         <br>

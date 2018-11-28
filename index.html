@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>bootstrap</title>
+	<title>Enoteca Maria</title>
 
 	<!--Required metatag and stylesheet-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="css/jquery.e-calendar.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script src="js/jquery.e-calendar.js"></script>
+
 
 	<!--Custom styles here-->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!--Your HTML here-->
-	<h1>Hello World</h1>
+    <nav class="navbar navbar-default affix-top">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">Enoteca Maria</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="grandmas.html">Grandmas</a></li>
+                <li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
 	<p><a href="reference.html">check out the reference material.</a></p>
 
 	<!--Required scripts-->
