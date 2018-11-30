@@ -1,0 +1,14 @@
+.navbar-default{
+    background:url(../img/logo.png)
+}
+
+.navbar{
+    min-height:87px;
+}
+
+.navbar-brand{
+    padding:0px;
+}
+.item img{
+    width:100%;
+}
