@@ -31,13 +31,14 @@
 			</ul>
 		</div>
 	</nav>
+    <br>
     	<div class="container">
-		<h2 class="text-uppercase">Grid</h2>
 		<!--then a row-->
 		<div class="row">
 			<!--then columns-->
 			<div class="col-xs-4">
-				<p>column 1</p>
+				<h4>Nonna's for this week</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 			<div class="col-xs-4">
 				<h4>Nonnas-in-training Registration Form</h4>
@@ -51,12 +52,14 @@
              <label>Phone<br>
             <input type="phone" name="phn">
             </label><br>
+            <div class="avail">
             <label>Days Available<br>
             <input type="radio" name="day" value="Thu"> Thursday<br>
             <input type="radio" name="day" value="Fri"> Friday<br>
             <input type="radio" name="day" value="Sat"> Saturday<br>
             <input type="radio" name="day" value="Sun"> Sunday<br>
-            </label><br>
+            </label>
+                </div>
             <label>Languages Spoken<br>
             <input type="language" name="lng">
             </label><br>
@@ -68,7 +71,7 @@
 			</div>
             <div class="col-xs-4">
                 <h4>FAQ About Nonnas-in-training Program</h4>
-				<p>column 3</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 		</div>
 	</div>
@@ -77,11 +80,11 @@
         <br>
         <br>
 <footer>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="calendar.html">Calendar</a>
-    <a href="menu.html">Menu</a>
-    <a href='grandmas.html'>Grandmas</a>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="calendar.html">Calendar</a> |
+    <a href="menu.html">Menu</a> |
+    <a href='grandmas.html'>Grandmas</a> |
     <a href="contact.html">Contact</a>   
     </footer>
 
@@ -91,15 +94,19 @@
 
 	<!--Custom script here-->
 	<script>
-    function d{
-        if (d == "Thursday"){
-            document.write('You are scheduled to cook Italian with Donatella!');
-        } else if (d == "Friday") {
-            document.write('Congrats! You will make Indian food with Priti!');
-            else if (d == "Saturday"){
+        function day (d){
+        avail= ['Thursday','Friday','Saturday'];
+        if (avail.indexOf(d) == -1){
+            document.write('Sorry. We currently do not have any available Nonnas on Sundays.');
+            goodDay = false;
+        } else if (avail.indexOf(d) == 0){
+            
+          document.write('Get ready to make authentic Chinese with Cindy!');
+        } else if (avail.indexOf(d) == 1) {
+            document.write('Congrats! You will make Indian food with Eva!');
+        }
+            else if (avail.indexOf(d) == 2){
                 document.write('Get ready to pound out some schnitzel with Pam!');
-            else if (d == "Sunday"){
-                document.write('You will make traditional Chinese food with Sally!');
             };
                 
             };
@@ -107,8 +114,9 @@
         
     };  
         document.getElementById('eresponse').onclick=function(){
-            day
-        }
+            day = document.querySelector('input[name=day]':checked).value;
+            day(d);
+        };
     </script>
 </body>
 
